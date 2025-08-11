@@ -8,22 +8,23 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/generador")
 public class GeneradorDeProductosController {
-
     private final ChatClient chatClient;
 
-    // Constructor
-    public GeneradorDeProductosController(ChatClient.Builder chatClienteBuilder) {
-        this.chatClient = chatClienteBuilder.build();
+    public GeneradorDeProductosController(ChatClient.Builder chatClientBuilder) {
+        this.chatClient = chatClientBuilder.build();
     }
 
-    @GetMapping("/ai")
-    String generadorDeProductos() {
+    @GetMapping
+    public String generadorDeProductos(){
         var pregunta = "Genera 5 productos ecológicos";
         return this.chatClient.prompt()
                 .user(pregunta)
                 .call()
                 .content();
     }
+
 }
+
+
 
 
