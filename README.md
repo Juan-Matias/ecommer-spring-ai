@@ -4,8 +4,8 @@ Ecomart es una aplicación Java/Spring Boot que integra inteligencia artificial 
 
 ## 🚀 Tecnologías utilizadas
 
-- **Java 17+**
-- **Spring Boot** 3.x
+- **Java 17+** :
+- **Spring Boot** 3.x :
 - **Spring AI** (cliente de OpenAI)
 - **Maven**
 - **REST API**
